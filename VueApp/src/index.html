@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue js</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+    <header>Hi</header>
+    <article>
+        <p>I am Charles.</p>
+    </article>
+    <article>
+        <div>{{title}}</div>
+        <div v-html="description"></div>
+        <ul>
+            <li v-for="(item, index) in skills">
+                <button v-on:click="deleteSkill(index)">X</button>
+            {{ item.text }}
+            </li>
+        </ul>
+    </article>
+    <article>
+        <input type="text" name="" id="skillForm" v-on:keypress.enter="addSkill"/>
+        <button v-on:click="addSkill">Add skill</button>
+    </article>
+    <article>
+        <header>Website and me</header>
+        <ul>
+            <li v-for="item in websites">
+                <h4>{{item.company | capitalize}}</h4>
+                <span> The {{item.url | undercase}} is owned by {{ item.company | capitalize }}.</span>
+                <br />
+                <a href="#">{{ item.url | undercase | url }}</a>
+            </li>
+        </ul>
+    </article>
+    <footer>Thank you</footer>
+</div>
+
+<script src="../dist/bundle.js"></script>
+</body>
+</html>

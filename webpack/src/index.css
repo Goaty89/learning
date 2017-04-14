@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+header{
+
+}
+
+article {
+    background-color: goldenrod;
+}
+
+.element {
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
